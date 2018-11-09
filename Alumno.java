@@ -12,12 +12,12 @@ public class Alumno {
      */
     public Alumno(String nombreCompleto, String numeroMatriculaAlumno, int edadAlumno) {
         nombre = nombreCompleto;
-        if (nombre.length() < 4) {
+        if (nombre.length() < 3) {
             System.out.println("El nombre introducido es demasiado corto");
         }
          numeroMatricula = numeroMatriculaAlumno;
         
-        if (numeroMatricula.length() <3) {
+        if (numeroMatricula.length() <4) {
             System.out.println("El número de matrícula es demasiado corto");
         }
         edad = edadAlumno;
