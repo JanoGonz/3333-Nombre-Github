@@ -12,7 +12,14 @@ public class Alumno {
      */
     public Alumno(String nombreCompleto, String numeroMatriculaAlumno, int edadAlumno) {
         nombre = nombreCompleto;
-        numeroMatricula = numeroMatriculaAlumno;
+        if (nombre.length() < 4) {
+            System.out.println("El nombre introducido es demasiado corto");
+        }
+         numeroMatricula = numeroMatriculaAlumno;
+        
+        if (numeroMatricula.length() <3) {
+            System.out.println("El número de matrícula es demasiado corto");
+        }
         edad = edadAlumno;
     }
 
@@ -43,5 +50,9 @@ public class Alumno {
      */
     public String getNombreUsuarioGithub() {
         return nombre.substring(0, 3) + numeroMatricula.substring(0, 4);
+    }
+    
+    public int length() {
+     return nombre.length();
     }
 }
