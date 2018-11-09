@@ -41,7 +41,7 @@ public class Alumno {
      * Imprime por pantalla los detalles del alumno
      */
     public void imprimeDetalles() {
-        System.out.println(nombre + " (" + numeroMatricula + ") - " + edad + " años");
+        System.out.println(nombre + " (" + numeroMatricula + ") - " + edad + " anos");
     }
     
     /**
@@ -49,10 +49,19 @@ public class Alumno {
      * en su cuenta de Github en formato de 7 caracateres
      */
     public String getNombreUsuarioGithub() {
-        return nombre.substring(0, 3) + numeroMatricula.substring(0, 4);
+        int letrasNombre;
+        int letrasMatricula;
+        if (nombre.length() < 3) {
+            letrasNombre = nombre.length();
+        } else {
+            letrasNombre = 3;
+        }
+        if (numeroMatricula.length() < 4) {
+            letrasMatricula = numeroMatricula.length();
+        } else {
+            letrasMatricula = 4;
+        }
+        return nombre.substring(0, letrasNombre) + numeroMatricula.substring(0, letrasMatricula);
     }
     
-    public int length() {
-     return nombre.length();
-    }
 }
